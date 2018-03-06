@@ -25,9 +25,12 @@ public class Shop2018 {
        Koszyk koszyk = new Koszyk();
        koszyk.dodaj(chleb);
        koszyk.dodaj(maslo);
+       koszyk.dodaj(maslo);
        koszyk.dodaj(ser);
        koszyk.dodaj(mleko);
        koszyk.dodaj(mleko);
+       koszyk.dodaj(mleko);
+       
        
        
        

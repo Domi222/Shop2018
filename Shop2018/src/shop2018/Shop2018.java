@@ -29,7 +29,12 @@ public class Shop2018 {
        koszyk.dodaj(mleko);
        koszyk.dodaj(mleko);
        
+       
+       
        System.out.println(koszyk.doZaplaty());
+       System.out.println(koszyk);
+       
+       
        
     
        

@@ -5,11 +5,13 @@
  */
 package shop2018;
 
+import java.math.BigDecimal;
+
 public class Produkt {
     private String nazwa;
-    private double cena;
+    private BigDecimal cena;
 
-    public Produkt(String nazwa, double cena) {
+    public Produkt(String nazwa, BigDecimal cena) {
         this.nazwa = nazwa;
         this.cena = cena;
     }
@@ -18,8 +20,13 @@ public class Produkt {
         return nazwa;
     }
 
-    public double getCena() {
+    public BigDecimal getCena() {
         return cena;
+    }
+    public String toString()
+    {
+        return nazwa +"("+cena+"zł)";
+  
     }
     
 }

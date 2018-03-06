@@ -7,28 +7,37 @@ package shop2018;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class Koszyk {
-    private List<Produkt> lista = new ArrayList();
-    
+    //private List<Produkt> lista = new ArrayList();
+    private Map<Produkt,Integer> map=new HashMap();
     public void dodaj(Produkt p)
     {
-        lista.add(p);
+        
+        if(map.containsKey(p))
+        {
+            int i = map.get(p);
+            map.put(p,i+1);
+        }else{
+                map.put(p, 1);
     }
-    
+    }
     public BigDecimal doZaplaty()
     {
         BigDecimal sum = BigDecimal.ZERO;
-        for(Produkt p : lista)
+        for(Produkt p : map.keySet())
         {
-            sum = sum.add(p.getCena());
+            int ilosc = map.get(p);
+            sum = sum.add(p.getCena().multiply(new BigDecimal(ilosc)));
         }
         return sum;
     }
     public String toString()
     {
-      return lista.toString() + " "+doZaplaty();
+      return map.toString() + " "+doZaplaty();
  }
 }

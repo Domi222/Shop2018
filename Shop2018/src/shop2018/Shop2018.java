@@ -17,24 +17,24 @@ public class Shop2018 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Produkt chleb = new Produkt ("chleb",new BigDecimal("2.2"));
-       Produkt maslo = new Produkt ("maslo",new BigDecimal("6.15"));
-       Produkt mleko = new Produkt ("mleko",new BigDecimal("2.00"));
-       Produkt ser = new Produkt ("ser",new BigDecimal("7.50"));
+       Product chleb = new Product ("chleb",new BigDecimal("2.2"));
+       Product maslo = new Product ("maslo",new BigDecimal("6.15"));
+       Product mleko = new Product ("mleko",new BigDecimal("2.00"));
+       Product ser = new Product ("ser",new BigDecimal("7.50"));
        
-       Koszyk koszyk = new Koszyk();
-       koszyk.dodaj(chleb);
-       koszyk.dodaj(maslo);
-       koszyk.dodaj(maslo);
-       koszyk.dodaj(ser);
-       koszyk.dodaj(mleko);
-       koszyk.dodaj(mleko);
-       koszyk.dodaj(mleko);
-       
-       
+       Cart koszyk = new Cart();
+       koszyk.add(chleb);
+       koszyk.add(maslo);
+       koszyk.add(maslo);
+       koszyk.add(ser);
+       koszyk.add(mleko);
+       koszyk.add(mleko);
+       koszyk.add(mleko);
        
        
-       System.out.println(koszyk.doZaplaty());
+       
+       
+       System.out.println(koszyk.toPay());
        System.out.println(koszyk);
        
        

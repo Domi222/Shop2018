@@ -27,6 +27,10 @@ public TreeSet<Product>productsSortedByPrice(){
     set.addAll(products);
     return set;
 }
+public void doOrder(Cart koszyk){
+    
+    
+}
 
 @Override
 public String toString(){
@@ -40,3 +44,5 @@ public static void main(String[] args){
     
 }
 }
+
+
